@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rust_Diesel_Calculator</title>
+	<style>
+		/* Fügt die @font-face Regel hinzu */
+		@font-face {
+			font-family: 'Rust'; /* Benennt die Schriftart */
+			src: url('Rust.ttf'); /* Verweist auf die Schriftartdatei */
+		}
+		
+		body {
+			background-color: #151413;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			font-family: 'Rust', sans-serif; /* Setzt die Schriftart für den Body */
+		}
+		h1 {
+			color: #ffffff;
+			text-align: center;
+			margin-top: 0;
+			font-family: 'Rust', sans-serif; /* Setzt die Schriftart für die Überschrift */
+		}
+		p {
+			color: #bbb2a9;
+			text-align: center;
+			margin-top: 0;
+			font-family: 'Rust', sans-serif; /* Setzt die Schriftart für die Überschrift */
+		}
+		.form-container {
+		background-color: rgba(255, 255, 255, 0.2);
+		padding: 10px;
+		text-align: center; /* neues Attribut */
+		}
+
+		form {
+		margin: 0;
+		}
+
+		label {
+		display: block;
+		margin-bottom: 5px;
+		color: #fff;
+		}
+
+		input[type=number] {
+		border: none;
+		border-radius: 5px;
+		padding: 10px;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: #fff;
+		background-color: transparent;
+		}
+
+
+	</style>
+
+<script>
+	function calculate() {
+	  var selectedValue = document.getElementById("zahl").value;
+	  
+	  // Berechnungen
+	  var highQualityMetalOre = 100 * selectedValue;
+	  var sulfurOre = 2000 * selectedValue;
+	  var metalFragments = 5000 * selectedValue;
+	  var stones = 10000 * selectedValue;
+	  var time = 2 * selectedValue;
+	
+		// Tabelle erstellen
+		var table = "<table><tr><th>Ressourcen</th><th>Output</th><th>Time</th></tr><tr><td><img src='hq.metal.ore.png' alt='High Quality Metal Ore' /></td><td>" + highQualityMetalOre + "</td><td>" + time + "</td></tr><tr><td><img src='sulfur.ore.png' alt='Sulfur Ore' /></td><td>" + sulfurOre + "</td><td>" + time + "</td></tr><tr><td><img src='metal.fragments.png' alt='Metal Fragments' /></td><td>" + metalFragments + "</td><td>" + time + "</td></tr><tr><td><img src='stones.png' alt='Stones' /></td><td>" + stones + "</td><td>" + time + "</td></tr></table>";
+
+	  // Tabelle in HTML einfügen
+	  document.getElementById("result").innerHTML = table;
+	}
+	</script>
+
+</head>
+<body>
+	<h1>
+		Rust Diesel Calculator</h1>
+	<div class="form-container">
+
+<div class="form-container">
+	<label for="zahl">HOW MUCH DIESEL DO YOU HAVE ?</label>
+	<select id="zahl" name="zahl"></select>
+	
+	<script>
+		var select = document.getElementById("zahl"); // Auswahl-Element auswählen
+	
+		// Schleife zum Erstellen von Optionen von 1 bis 50
+		for (var i = 1; i <= 50; i++) {
+			var option = document.createElement("option"); // neue Option erstellen
+			option.value = i; // Wert der Option zuweisen
+			option.text = i; // Text der Option zuweisen
+			select.add(option); // Option zum Auswahl-Element hinzufügen
+		}
+	</script>
+</div>
+
+<button onclick="calculate()">Calculate</button>
+
+<div id="result"></div>
+
+</body>
+</html>
