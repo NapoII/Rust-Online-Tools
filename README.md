@@ -1,8 +1,18 @@
-# Rust_Diesel_Calculator
-This is an HTML code that creates a Rust Diesel Calculator webpage. The page allows users to input a number, which represents the amount of diesel they want to use, and the page then calculates the amount of resources that can be obtained using that amount of diesel.
+## **Rust Diesel Calculator**
 
-The page has a background color of #151413 and uses the Rust font for all text. The page is divided into two sections, each of which has a form for inputting the amount of diesel to be used. The first section calculates the resources that can be obtained from using the diesel in a quarry, while the second section calculates the resources that can be obtained from using the diesel in a giant excavator.
+This is a simple HTML page with CSS and JavaScript that calculates the resources required for running a quarry or a giant excavator in the game Rust. The user inputs the number of fuel units they want to use and the page calculates the resources required for that amount of fuel.
 
-The calculations are done using JavaScript, and the results are displayed in a table that shows the amount of high-quality metal ore, sulfur ore, metal fragments, and stones that can be obtained, as well as the time it takes to obtain them. The results are formatted using a function that adds spaces to large numbers for readability.
+## Getting Started
 
-Overall, the page provides a useful tool for Rust players who want to optimize their resource gathering by using diesel efficiently.
+Clone or download the repository to your local machine and open the index.html file in your browser.
+
+## Usage
+
+Enter the number of fuel units you want to use in the input field and the page will calculate the required resources for that amount of fuel. The results will be displayed in a table with three columns - one for a quarry, one for a giant excavator, and one for the time in minutes.
+Contributing
+
+Contributions are welcome. Please open an issue or a pull request with any suggestions or improvements.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
