@@ -1,5 +1,5 @@
 ## **Rust Diesel Calculator**
-<a href="https://napoii.github.io/Rust_Diesel_Calculator/">Rust Diesel Calculator</a>
+<a href="https://napoii.github.io/Rust_Diesel_Calculator/">Rust Diesel Calculator Online Tool</a>
 
 
 This is a simple HTML page with CSS and JavaScript that calculates the resources required for running a quarry or a giant excavator in the game Rust. The user inputs the number of fuel units they want to use and the page calculates the resources required for that amount of fuel.
