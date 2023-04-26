@@ -1,160 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Rust_Diesel_Calculator</title>
-	<style>
-		/* Fügt die @font-face Regel hinzu */
-		@font-face {
-			font-family: 'Rust'; /* Benennt die Schriftart */
-			src: url('Rust.ttf'); /* Verweist auf die Schriftartdatei */
-		}
-		
-		body {
-			background-color: #151413;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: center;
-			height: 100vh;
-			margin: 0;
-			font-family: 'Rust', sans-serif; /* Setzt die Schriftart für den Body */
-		}
-		h1 {
-			color: #ffffff;
-			text-align: center;
-			margin-top: 0;
-			font-family: 'Rust', sans-serif; /* Setzt die Schriftart für die Überschrift */
-		}
-		p {
-			color: #bbb2a9;
-			text-align: center;
-			margin-top: 0;
-			font-family: 'Rust', sans-serif; /* Setzt die Schriftart für die Überschrift */
-		}
-		.form-container-A {
-		background-color: rgba(255, 255, 255, 0.2);
-		padding: 10px;
-		text-align: center; /* neues Attribut */
-		}
-
-		form {
-		margin: 0;
-		}
-
-		label {
-		display: block;
-		margin-bottom: 5px;
-		color: #fff;
-		}
-
-		input[type=number] {
-		border: none;
-		border-radius: 5px;
-		padding: 10px;
-		width: 100%;
-		box-sizing: border-box;
-		font-size: 16px;
-		color: #fff;
-		background-color: transparent;
-		}
-		.form-container-B {
-		background-color: rgba(255, 255, 255, 0.2);
-		padding: 10px;
-		text-align: center; /* neues Attribut */
-		}
-
-		form {
-		margin: 0;
-		}
-
-		label {
-		display: block;
-		margin-bottom: 5px;
-		color: #fff;
-		}
-
-		input[type=number] {
-		border: none;
-		border-radius: 5px;
-		padding: 10px;
-		width: 100%;
-		box-sizing: border-box;
-		font-size: 16px;
-		color: #fff;
-		background-color: transparent;
-		}
-
-		td {
-  text-align: center;
-  font-family: Calibri, sans-serif;
-}
-table {
-			font-family: Calibri, sans-serif;
-			font-size: 14px;
-			border-collapse: collapse;
-			width: 100%;
-		}
-	</style>
-
-<script>
-	function calculate() {
-	  var selectedValue = document.getElementById("zahl").value;
-	  
-	  // Berechnungen
-	  var highQualityMetalOre = 100 * selectedValue;
-	  var sulfurOre = 2000 * selectedValue;
-	  var metalFragments = 5000 * selectedValue;
-	  var stones = 10000 * selectedValue;
-	  var time = 2 * selectedValue;
-	  var highQualityMetalOre_Q = 50 * selectedValue;
-	  var sulfurOre_Q = 1000 * selectedValue;
-	  var metalFragments_Q = 1000 * selectedValue;
-	  var stones_Q = 5000 * selectedValue;
-	  var time_Q = 216 * selectedValue;
-	  
-	  // Formatierung der Zahlen mit Leerzeichen
-	  function formatNumber(num) {
-	    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-	  }
-	  
-	  var table = "<table><tr><th></th><th><a href='https://rustlabs.com/item/mining-quarry' target='_blank'>Quarry</a></th><th><a href='https://rustlabs.com/entity/giant-excavator' target='_blank'>Giant Ex</a></th><th>Time in min</th></tr><tr><td><img src='hq.metal.ore.png' alt='High Quality Metal Ore' /></td><td lang='" + formatNumber(highQualityMetalOre_Q) + "'>" + formatNumber(highQualityMetalOre_Q) + "</td><td lang='" + formatNumber(highQualityMetalOre) + "'>" + formatNumber(highQualityMetalOre) + "</td><td lang='" + formatNumber(time) + "'>" + formatNumber(time) + "</td></tr><tr><td><img src='sulfur.ore.png' alt='Sulfur Ore' /></td><td lang='" + formatNumber(sulfurOre_Q) + "'>" + formatNumber(sulfurOre_Q) + "</td><td lang='" + formatNumber(sulfurOre) + "'>" + formatNumber(sulfurOre) + "</td><td lang='" + formatNumber(time) + "'>" + formatNumber(time) + "</td></tr><tr><td><img src='metal.fragments.png' alt='Metal Fragments' /></td><td lang='" + formatNumber(metalFragments_Q) + "'>" + formatNumber(metalFragments_Q) + "</td><td lang='" + formatNumber(metalFragments) + "'>" + formatNumber(metalFragments) + "</td><td lang='" + formatNumber(time) + "'>" + formatNumber(time) + "</td></tr><tr><td><img src='stones.png' alt='Stones' /></td><td lang='" + formatNumber(stones_Q) + "'>" + formatNumber(stones_Q) + "</td><td lang='" + formatNumber(stones) + "'>" + formatNumber(stones) + "</td><td lang='" + formatNumber(time) + "'>" + formatNumber(time) + "</td></tr></table>";
-
-	  // Tabelle in HTML einfügen
-	  document.getElementById("result").innerHTML = table;
-	}
-</script>
-
-
-
-</head>
-<body>
-	<h1>
-		Rust Diesel Calculator</h1>
-	<div class="form-container-A">
-
-<div class="form-container-A">
-	<label for="zahl">HOW MUCH DIESEL DO YOU HAVE?</label>
-	<p></p>
-	<select id="zahl" name="zahl"></select>
-	
-	<script>
-		var select = document.getElementById("zahl");
-		
-		for (var i = 1; i <= 50; i++) {
-			var option = document.createElement("option");
-			option.value = i;
-			option.text = i;
-			select.add(option);
-		}
-	</script>
-
-<button onclick="calculate()">Calculate</button>
-<p></p>
-<div class="form-container-B"id="result"></div>
-<div></div>
-<p></p>
-<p style="font-size: small; color: #2a2e31;">create by <a href="https://github.com/NapoII">Napo_II</a></p>
-
-
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Napos Rust Online Tools</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<center>
+    <header>
+      <h1>Napos Rust Online Tools</h1>
+      <nav>
+        <ul>
+          <li><a href="diesel_calc.html">Diesel Calculator</a></li>
+          <li><a href="Wheel_of_Fortune.html">Wheel of Fortune</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Welcome to Napos Rust Online Tools!</h2>
+      <p>Here you'll find a set of online tools that will help you survive in the harsh world of Rust.</p>
+	  <p>Use our Diesel Calculator to keep track of your fuel consumption and production, or try your luck at the Wheel of Fortune!</p>
+    </main>
+    <footer>
+      <p>&copy; 2023 Napos Rust Online Tools</p>
+    </footer>
+</center>
+  </body>
 </html>

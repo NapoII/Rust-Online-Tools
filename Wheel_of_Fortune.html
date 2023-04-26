@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Drehendes Rad</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Das Bild wird mit einem <img> Element eingefügt -->
+    <img id="rad" src="img/rad.png" alt="Ein drehendes Rad">
+    <br>
+    <img id="narbe" src="img/narbe.png" alt="Narbe-Bild">
+    
+    <div class="image-container">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2967292367"><img src="img/steam_guide.gif" alt="Steam Guide" style="width: 40%;"></a>
+
+      </div>
+
+
+    <button id="startButton">Start</button>
+
+    <script>
+      function startAnimation() {
+        var angle = 0;
+        var rad = document.getElementById("rad");
+        var speed = 0;
+        var running = false;
+        var startButton = document.getElementById("startButton");
+      
+        // Eventlistener für das Mausrad
+        document.addEventListener("wheel", function(e) {
+          e.preventDefault();
+          if (running) return; // ignore input if animation is already running
+          angle += e.deltaY * 0.05;
+          rad.style.transform = "translate(-50%, -50%) rotate(" + angle + "deg)";
+        });
+      
+        // Eventlistener für den Button
+        startButton.addEventListener("click", function(e) {
+          e.preventDefault();
+          if (running) return; // ignore input if animation is already running
+          running = true;
+          speed = 200 + Math.random() * 40; // set initial speed to random value between 50 and 100
+          spin();
+        });
+      
+        function spin() {
+          angle += speed;
+          rad.style.transform = "translate(-50%, -50%) rotate(" + angle + "deg)";
+          speed *= 0.9; // reduce speed gradually
+          if (speed < 0.95) {
+            running = false; // animation is finished
+            speed = 1;
+          } else {
+            requestAnimationFrame(spin);
+          }
+        }
+      }
+
+      window.onload = startAnimation;
+    </script>
+    
+  </body>
+</html>

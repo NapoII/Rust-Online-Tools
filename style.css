@@ -1,0 +1,159 @@
+
+/* Fügt die @font-face Regel hinzu */
+@font-face {
+    font-family: 'Rust'; /* Benennt die Schriftart */
+    src: url('Rust.ttf'); /* Verweist auf die Schriftartdatei */
+}
+
+body {
+    background-color: #151413;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Rust', sans-serif; /* Setzt die Schriftart für den Body */
+}
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Rust', sans-serif; /* Setzt die Schriftart für die Überschrift */
+}
+p {
+    color: #bbb2a9;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Rust', sans-serif; /* Setzt die Schriftart für die Überschrift */
+}
+.form-container-A {
+background-color: rgba(255, 255, 255, 0.2);
+padding: 10px;
+text-align: center; /* neues Attribut */
+}
+
+form {
+margin: 0;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+color: #fff;
+}
+
+input[type=number] {
+border: none;
+border-radius: 5px;
+padding: 10px;
+width: 100%;
+box-sizing: border-box;
+font-size: 16px;
+color: #fff;
+background-color: transparent;
+}
+.form-container-B {
+background-color: rgba(255, 255, 255, 0.2);
+padding: 10px;
+text-align: center; /* neues Attribut */
+}
+
+form {
+margin: 0;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+color: #fff;
+}
+
+input[type=number] {
+border: none;
+border-radius: 5px;
+padding: 10px;
+width: 100%;
+box-sizing: border-box;
+font-size: 16px;
+color: #fff;
+background-color: transparent;
+}
+
+td {
+text-align: center;
+font-family: Calibri, sans-serif;
+}
+table {
+    font-family: Calibri, sans-serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+    /* CSS für das Bild */
+    #rad {
+position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+transform-origin: center center;}
+
+
+#narbe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+
+  #startButton {
+    position: absolute;
+    bottom: calc(100vh - 50px); /* ändern Sie die 50px auf die gewünschte Button-Höhe */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px 32px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background-color: #be5b20;
+    border: none;
+    border-radius: 5px;
+    z-index: 1; /* erhöht die Ebene des Buttons, um ihn über dem <div> anzuzeigen */
+  }
+  
+  
+  #startButton:hover {
+    background-color: #c57338;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  .image-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 0;
+  }
+  
+  .image-container p:nth-child(2) {
+    margin-top: 10px;
+  }
+  
+
+  .image-container img {
+    margin: 1px;
+    bottom: 0;
+  } 
+
+  #textContainer-rad {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 0;
+  }
