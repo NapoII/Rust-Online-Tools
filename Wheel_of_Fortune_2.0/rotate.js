@@ -157,8 +157,13 @@ betReturns.set(" 20x", {ret: 21});
   init = function() {
     target.addEventListener("mousedown", start, false);
     target.addEventListener("mousemove", rotate, false);
-    return target.addEventListener("mouseup", stop, false);
+    target.addEventListener("mouseup", stop, false);
+    
+    target.addEventListener("touchstart", start, false);
+    target.addEventListener("touchmove", rotate, false);
+    target.addEventListener("touchend", stop, false);
   };
+  
 
   R2D = 180 / Math.PI;
 
