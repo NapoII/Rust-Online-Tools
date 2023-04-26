@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body {
+    display: flex;
+    justify-content: right;
+  }
+  #target:hover {
+    color: orange;
+    cursor: pointer;
+  }
+</style>
+<head>
+<style>
+body {background-color: beige;}
+h1   {color: blue;}
+div    {
+  color: #454545;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin: 5px;
+  font-family: Georgia, sans-serif;
+}
+p    {
+  color: black;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+div.image {
+    content:url(https://res.cloudinary.com/douhxaia9/image/upload/v1611014232/wheel_raw_hxkquz.png);
+    height:250px;
+    max-width: 250vw;
+ }
+</style>
+</head>
+<body>
+  <div id="target", class="image">
+    <script src="rotate.js"></script>
+  </div>
+  <div>
+    <strong>CURRENT SCRAP:</strong> <br>
+    <input id="currScrap" type="number" min="0" step="1" onchange="clearBets()"><br><br>
+    <strong>CURRENT POSITION:</strong><br>
+    <p id="currPos">0</p>
+    <p id="currCol">RED</p>
+    <button id="calcButton" onclick="calcButtonClicked()">Calculate Bet</button><br><br>
+    <strong>KELLY BET AMOUNT:</strong><br>
+    <p id="betAmt">0</p>
+    <strong>COLOR TO BET ON:</strong><br>
+    <p id="betAdvice">NONE</p>
+    <input type="checkbox" id="doScrapCalc" name="Calculate Scrap Automatically?" checked>
+    <label for="doScrapCalc">Calculate Scrap Automatically?</label><br><br>
+  </div>
+  <div>
+  <strong> DIRECTIONS </strong>
+  <p>
+  First, input your current scrap in the text box. <br>
+  Next, spin the wheel so that it's oriented the same as it is in game. <br>
+  So, the spot under the red triangle in game is pointed north on this page.<br>
+  Make sure the you have the right spot selected by verifying the CURRENT POSITION's color.<br>
+  Hit "Calculate Bet".<br>
+  The bet optimal bet amount and color will be calculated.<br>
+  Bet that amount on that color in game.<br><br>
+  After the wheel spins, rotate this wheel to the correct position again and calculate.<br><br>
+  Your scrap will update automatically. <br>
+  </p>
+  </div>
+</body>
+    
