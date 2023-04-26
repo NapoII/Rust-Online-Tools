@@ -2,37 +2,36 @@
 <a href="https://github.com/NapoII">
     <img src="Readme_top.png"  alt="NapoII">
 </a>
-
 </p>
 
 <center>
 
-# Rust-Online-Tools 
+# Rust-Online-Tools
 </center>
 
 <p align="center">
-<a href="https://github.com/NapoII/Rust-Online-Tools /archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/github/downloads/NapoII/Rust-Online-Tools /total" alt="downloads/total">
+<a href="https://github.com/NapoII/Rust-Online-Tools/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/github/downloads/NapoII/Rust-Online-Tools/total" alt="downloads/total">
 </a>
 
-<a href="https://github.com/NapoII/Rust-Online-Tools /archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/github/repo-size/NapoII/Rust-Online-Tools " alt="github/repo-size">
+<a href="https://github.com/NapoII/Rust-Online-Tools/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/github/repo-size/NapoII/Rust-Online-Tools" alt="github/repo-size">
 </a>
 
-<a href="https://github.com/NapoII/Rust-Online-Tools /blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/NapoII/Rust-Online-Tools " alt="github/license">
+<a href="https://github.com/NapoII/Rust-Online-Tools/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/NapoII/Rust-Online-Tools" alt="github/license">
 </a>
 
-<a href="https://github.com/NapoII/Rust-Online-Tools /actions">
-    <img src="https://img.shields.io/github/last-commit/NapoII/Rust-Online-Tools " alt="github/last-commit">
+<a href="https://github.com/NapoII/Rust-Online-Tools/actions">
+    <img src="https://img.shields.io/github/last-commit/NapoII/Rust-Online-Tools" alt="github/last-commit">
 </a>
 
-<a href="https://github.com/NapoII/Rust-Online-Tools /issues">
-    <img src="https://img.shields.io/github/issues/NapoII/Rust-Online-Tools ?style=plastic" alt="github/issues">
+<a href="https://github.com/NapoII/Rust-Online-Tools/issues">
+    <img src="https://img.shields.io/github/issues/NapoII/Rust-Online-Tools?style=plastic" alt="github/issues">
 </a>
 
-<a href="https://github.com/NapoII/Rust-Online-Tools /stargazers">
-    <img src="https://img.shields.io/github/stars/NapoII/Rust-Online-Tools ?style=social" alt="github/stars">
+<a href="https://github.com/NapoII/Rust-Online-Tools/stargazers">
+    <img src="https://img.shields.io/github/stars/NapoII/Rust-Online-Tools?style=social" alt="github/stars">
 </a>
 
 <a href="https://discord.gg/g7EW4P65">
@@ -40,7 +39,7 @@
 </a>
 </p>
 
-<a href="https://napoii.github.io/Rust-Online-Tools /">Rust Diesel Calculator Online Tool</a>
+<a href="https://napoii.github.io/Rust-Online-Tools/">Rust Diesel Calculator Online Tool</a>
 
 
 This is a simple HTML page with CSS and JavaScript that calculates the resources required for running a quarry or a giant excavator in the game Rust. The user inputs the number of fuel units they want to use and the page calculates the resources required for that amount of fuel.
@@ -59,7 +58,7 @@ Contributions are welcome. Please open an issue or a pull request with any sugge
 
 This application requires Python 3.10.7.
 ```
-git clone https://github.com/NapoII/Rust-Online-Tools 
+git clone https://github.com/NapoII/Rust-Online-Tools
 ```
 start (index.html)
 
