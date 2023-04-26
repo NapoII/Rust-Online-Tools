@@ -33,6 +33,20 @@ div.image {
     height:250px;
     max-width: 250vw;
  }
+ #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+ }
+ #myTable th, #myTable td {
+    text-align: left;
+    padding: 8px;
+ }
+ #myTable tr:nth-child(even){background-color: #f2f2f2}
+ #myTable th {
+    background-color: #4CAF50;
+    color: white;
+ }
 </style>
 </head>
 <body>
@@ -53,19 +67,83 @@ div.image {
     <input type="checkbox" id="doScrapCalc" name="Calculate Scrap Automatically?" checked>
     <label for="doScrapCalc">Calculate Scrap Automatically?</label><br><br>
   </div>
-  <div>
-  <strong> DIRECTIONS </strong>
-  <p>
-  First, input your current scrap in the text box. <br>
-  Next, spin the wheel so that it's oriented the same as it is in game. <br>
-  So, the spot under the red triangle in game is pointed north on this page.<br>
-  Make sure the you have the right spot selected by verifying the CURRENT POSITION's color.<br>
-  Hit "Calculate Bet".<br>
-  The bet optimal bet amount and color will be calculated.<br>
-  Bet that amount on that color in game.<br><br>
-  After the wheel spins, rotate this wheel to the correct position again and calculate.<br><br>
-  Your scrap will update automatically. <br>
-  </p>
+  <div id="directions">
+    <strong> DIRECTIONS </strong>
+    <p>
+      First, input your current scrap in the text box. <br>
+      Next, spin the wheel so that it's oriented the same as it is in game. <br>
+      So, the spot under the red triangle in game is pointed north on this page.<br>
+      Make sure the you have the right spot selected by verifying the CURRENT POSITION's color.<br>
+      Hit "Calculate Bet".<br>
+      The bet optimal bet amount and color will be calculated.<br>
+      Bet that amount on that color in game.<br><br>
+      After the wheel spins, rotate this wheel to the correct position again and calculate.<br><br>
+      Your scrap will update automatically. <br>
+    </p>
   </div>
-</body>
+
+  <div id="table-container">
+    <button id="download-btn">Download Table</button>
+  <table>
+  <tr>
+    <th>Scrap</th>
+    <th>Position</th>
+    <th>Position Field</th>
+    <th>Bet</th>
+    <th>Prediction</th>
+  </tr>
+</table>
+</div>
+<script>
+  function downloadTable() {
+  var csv = convertTableToCSV();
+  var filename = "table.csv";
+  var link = document.createElement("a");
+  link.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(csv));
+  link.setAttribute("download", filename);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+
+  // Download Table Funktion
+  document.getElementById('download-btn').addEventListener('click', function() {
+    // Selektieren Sie die Tabelle und erstellen Sie eine Kopie davon
+    var table = document.querySelector('table');
+    var clone = table.cloneNode(true);
     
+    // Fügen Sie einen neuen Abschnitt hinzu, um den geklonten Tisch zu platzieren
+    var tableContainer = document.getElementById('table-container');
+    var downloadContainer = document.createElement('div');
+    downloadContainer.appendChild(clone);
+    tableContainer.appendChild(downloadContainer);
+    
+    // Konvertieren Sie die Tabelle in CSV-Format
+    var csvRows = [];
+    var rows = clone.querySelectorAll('tr');
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll('td, th');
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        csvRows.push(row.join(';'));
+    }
+    var csv = csvRows.join('\n');
+    
+    // Erstellen Sie einen Download-Link für die CSV-Datei
+    var blob = new Blob([csv], {type: "text/csv;charset=utf-8;"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "table.csv";
+    a.click();
+    
+    // Entfernen Sie den temporären Download-Container und geben Sie den ursprünglichen Tisch zurück
+    tableContainer.removeChild(downloadContainer);
+    tableContainer.appendChild(table);
+});
+
+</script>
+
+</body>
+</html>

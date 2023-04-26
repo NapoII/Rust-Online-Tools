@@ -209,6 +209,31 @@ document.getElementById("betAmt").innerHTML = 0;
   document.getElementById("betAdvice").innerHTML = "NONE";
 }
 
+
+function updateTable() {
+  var scrap = document.getElementById("currScrap").value;
+  var position = document.getElementById("currPos").innerHTML;
+  var positionField = document.getElementById("currCol").innerHTML;
+  var bet = document.getElementById("betAmt").innerHTML;
+  var prediction = document.getElementById("betAdvice").innerHTML;
+  
+  var table = document.querySelector("table");
+  var newRow = table.insertRow(-1);
+  var scrapCell = newRow.insertCell(0);
+  var positionCell = newRow.insertCell(1);
+  var positionFieldCell = newRow.insertCell(2);
+  var betCell = newRow.insertCell(3);
+  var predictionCell = newRow.insertCell(4);
+  
+  scrapCell.innerHTML = scrap;
+  positionCell.innerHTML = position;
+  positionFieldCell.innerHTML = positionField;
+  betCell.innerHTML = bet;
+  predictionCell.innerHTML = prediction;
+}
+
+
+
 function calcButtonClicked() {
   var intvalue = document.getElementById('currPos').innerHTML;
   var betPct = 0;
@@ -237,4 +262,5 @@ function calcButtonClicked() {
   var amtToBet = Math.floor(betPct * currentScrap);
   document.getElementById("betAmt").innerHTML = amtToBet;
   document.getElementById("betAdvice").innerHTML = betColor;
+  updateTable();
 }
