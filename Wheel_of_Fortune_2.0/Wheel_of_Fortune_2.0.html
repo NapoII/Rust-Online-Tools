@@ -50,8 +50,28 @@ div.image {
 </style>
 </head>
 <body>
+  <div>
+    <button id="rotate-left">&larr;</button>
+    <button id="rotate-right">&rarr;</button>
+  </div>
+  
   <div id="target", class="image">
-    <script src="rotate.js"></script>
+    <script src="rotate.js">
+      function rotateWheel(angle) {
+  var rotation = angle;
+  angle += rotation;
+  updateGraphics();
+  wheel.style.webkitTransform = "rotate(" + (angle + rotation) + "deg)";
+}
+document.getElementById("rotate-left").addEventListener("click", function() {
+  rotateWheel(-90);
+});
+
+document.getElementById("rotate-right").addEventListener("click", function() {
+  rotateWheel(90);
+});
+
+    </script>
   </div>
   <div>
     <strong>CURRENT SCRAP:</strong> <br>

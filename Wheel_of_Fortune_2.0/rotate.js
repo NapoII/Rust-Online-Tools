@@ -1,137 +1,137 @@
 let betPercentages = new Map();
 betPercentages.set('0', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",  
   kellyBetPct: "0.023972872",
-  currentColor: "RED 20x"
+  currentColor: "20x (RED)" 
 });
 betPercentages.set('1', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",
   kellyBetPct: "0.024021592",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('2', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",
   kellyBetPct: "0.015140644",
-  currentColor: " 3x"
+  currentColor: "3x (Green)"
 });
 betPercentages.set('3', {
-  betColor: "PURPLE 10x",
+  betColor: "10x (PURPLE)",
   kellyBetPct: "0.010842996",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('4', {
-  betColor: "PURPLE 10x",
+  betColor: "10x (PURPLE)",
   kellyBetPct: "0.017316848",
-  currentColor: "BLUE 5x"
+  currentColor: "5x (BLUE)"
 });
 betPercentages.set('5', {
-  betColor: "PURPLE 10x",
+  betColor: "10x (PURPLE)",
   kellyBetPct: "0.017370286",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('6', {
-  betColor: "PURPLE 10x",
+  betColor: "10x (PURPLE)",
   kellyBetPct: "0.009207527",
-  currentColor: " 3x"
+  currentColor: "3x (Green)"
 });
 betPercentages.set('7', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",
   kellyBetPct: "0.016999792",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('8', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",
   kellyBetPct: "0.023926348",
-  currentColor: "PURPLE 10x"
+  currentColor: "10x (PURPLE)"
 });
 betPercentages.set('9', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",
   kellyBetPct: "0.01513888",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('10', {
   betColor: "NONE",
   kellyBetPct: "0",
-  currentColor: " 3x"
+  currentColor: "3x (Green)"
 });
 betPercentages.set('11', {
   betColor: "NONE",
   kellyBetPct: "0",
-  currentColor: "BLUE 5x"
+  currentColor: "5x (BLUE)"
 });
 betPercentages.set('12', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0059727175",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('13', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0060228235",
-  currentColor: "BLUE 5x"
+  currentColor: "5x (BLUE)"
 });
 betPercentages.set('14', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.00602548",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('15', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0059895385",
-  currentColor: "GREEN 3x"
+  currentColor: "3x (Green)"
 });
 betPercentages.set('16', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.006000217",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('17', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0059564845",
-  currentColor: "PURPLE 10x"
+  currentColor: "10x (PURPLE)"
 });
 betPercentages.set('18', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0059984845",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('19', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.006039634",
-  currentColor: " 3x"
+  currentColor: "3x (Green)"
 });
 betPercentages.set('20', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0059838685",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('21', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0060115465",
-  currentColor: "BLUE 5x"
+  currentColor: "5x (BLUE)"
 });
 betPercentages.set('22', {
-  betColor: " 20x",
+  betColor: "20x (RED)",
   kellyBetPct: "0.0060124495",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 betPercentages.set('23', {
   betColor: "NONE",
   kellyBetPct: "0",
-  currentColor: " 3x"
+  currentColor: "3x (Green)"
 });
 betPercentages.set('24', {
-  betColor: "BLUE 5x",
+  betColor: "5x (BLUE)",
   kellyBetPct: "0.016948948",
-  currentColor: "YELLOW 1x"
+  currentColor: "1x (YELLOW)"
 });
 
 let betReturns = new Map();
 betReturns.set("NONE", {ret: 0});
-betReturns.set("YELLOW 1x", {ret: 2});
-betReturns.set(" 3x", {ret: 4});
-betReturns.set("BLUE 5x", {ret: 6});
-betReturns.set("PURPLE 10x", {ret: 11});
-betReturns.set(" 20x", {ret: 21});
+betReturns.set("1x (YELLOW)", {ret: 2});
+betReturns.set("3x (Green)", {ret: 4});
+betReturns.set("5x (BLUE)", {ret: 6});
+betReturns.set("10x (PURPLE)", {ret: 11});
+betReturns.set("20x (RED)", {ret: 21});
 
 
 (function() {
